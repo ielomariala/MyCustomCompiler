@@ -1,0 +1,60 @@
+int mult(int a, int b) {
+    int i;
+    int r;
+    r = 0;
+    i = 0;
+    while(i < b){
+        r = r + a;
+        i = i + 1;
+        };
+    return r;
+}
+
+void valabs(int *c){
+    if( *c < 0 ){
+        *c = -(*c);
+    };
+}
+
+int fact(int n){
+    if(n == 0 || n == 1){
+        return 1;
+    }
+    else{
+        int j;
+        j = n * fact(n-1);
+        return j;
+    };
+}
+
+int multrec(int a, int b){
+    if(b == 0) {
+        return 0;
+    }
+    else{
+        return a + multrec(a,b-1);
+    };
+}
+
+void main(){
+    int a; 
+    int b; 
+    int *c; 
+    int d;
+    int m;
+    int l;
+    int e;
+    int f;
+    int g;
+    int h;
+    m = 3;
+    a = 3;
+    b = 5;
+    *c = -2; 
+    e = 4;
+    f = 2;
+    d = mult(a,b);
+    valabs(c);
+    g = multrec(e,f);
+    h = fact(f);
+}
